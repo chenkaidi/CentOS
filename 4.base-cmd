@@ -1,0 +1,4 @@
+yum -y instll vim net-tools tree
+
+
+yum -y groupinstall Development tools
