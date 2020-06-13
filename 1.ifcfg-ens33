@@ -1,3 +1,6 @@
+ln -s /etc/sysconfig/network-scripts/ifcfg-ens33  /etc/ip
+
+
 BOOTPROTO="static"
 
 ONBOOT=yes
