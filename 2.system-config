@@ -10,3 +10,11 @@ EOF
 
 sed -i '/^#DefaultLimitNOFILE=/aDefaultLimitNOFILE=65535' /etc/systemd/system.conf 
 sed -i '/^#DefaultLimitNPROC=/aDefaultLimitNPROC=65535' /etc/systemd/system.conf
+
+
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+setenforce 0
+
+
+systemctl stop firewalld
+systemctl disable firewalld
