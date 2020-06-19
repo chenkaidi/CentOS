@@ -2,10 +2,12 @@ cat >> /etc/security/limits.conf <<EOF
 * soft nofile 65535 
 * hard nofile 65535
 EOF
+---
 cat >> /etc/security/limits.d/20-nproc.conf <<EOF
 *          soft    nproc     65535 
 root       soft    nproc     unlimited
 EOF
+---
 sed -i '/^#DefaultLimitNOFILE=/aDefaultLimitNOFILE=65535' /etc/systemd/system.conf 
 sed -i '/^#DefaultLimitNPROC=/aDefaultLimitNPROC=65535' /etc/systemd/system.conf
 ---
