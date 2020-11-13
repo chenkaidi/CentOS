@@ -1,2 +1,2 @@
 yum -y install vim wget git lrzsz net-tools tree
-yum -y groupinstall Development tools
+yum -y groupinstall "Development tools"
