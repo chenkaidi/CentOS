@@ -1,2 +1,17 @@
-yum -y install vim wget git lrzsz net-tools tree
-yum -y groupinstall "Development tools"
+yum -y install vim wget git lrzsz net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop sysstat nethogs gcc gcc-c++
+
+tree: tree以树形结构显示文件和目录
+nmap: nmap扫描端口的工具
+dos2unix: 转换脚本格式的工具
+lrzsz:
+rz+文件名(上传)
+sz+文件名(下载)
+nc: 文件传输,端口检查
+lsof: 反查端口进程,以及服务开发文件工具
+wget: 下载软件包工具
+tcpdump: 抓包,监听等重要排错工具
+htop: 系统进程相关信息查看工具
+iftop: 查看主机网卡带宽工具
+iotop:
+sysstat: 含有sar,iostat等重要系统性能查看工具
+nethogs: 显示进程的网络流量
