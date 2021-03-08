@@ -13,5 +13,8 @@ EOF
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 setenforce 0
 
+echo 'UseDNS no' >> /etc/ssh/sshd_config
+systemctl restart sshd
+
 systemctl stop firewalld
 systemctl disable firewalld
