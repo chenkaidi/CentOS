@@ -1,5 +1,8 @@
 yum -y install vim wget git lrzsz net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop sysstat nethogs gcc gcc-c++
 
+vim:
+git:
+net-tools: netstat
 tree: tree以树形结构显示文件和目录
 nmap: nmap扫描端口的工具
 dos2unix: 转换脚本格式的工具
