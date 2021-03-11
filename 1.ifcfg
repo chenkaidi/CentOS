@@ -1,4 +1,4 @@
-ln -s /etc/sysconfig/network-scripts/ifcfg-ens33  /etc/ip
+ln -s /etc/sysconfig/network-scripts/ifcfg-<Tab键>  /etc/ip
 ---
 BOOTPROTO="static"
 ONBOOT=yes
