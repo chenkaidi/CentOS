@@ -1,5 +1,5 @@
-yum -y install vim wget git lrzsz net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop sysstat nethogs gcc gcc-c++
-
+yum -y install vim wget git zip unzip lrzsz net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop iostat sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch
+ netstat bash-completion  procps-ng psmisc 
 vim:
 git:
 net-tools: netstat
@@ -18,3 +18,5 @@ iftop: 查看主机网卡带宽工具
 iotop:
 sysstat: 含有sar,iostat等重要系统性能查看工具
 nethogs: 显示进程的网络流量
+procps-ng: ps命令
+psmisc: pstree命令
