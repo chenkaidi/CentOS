@@ -19,5 +19,5 @@ iftop: 查看主机网卡带宽工具
 iotop:
 sysstat: 含有sar,iostat等重要系统性能查看工具
 nethogs: 显示进程的网络流量
-procps-ng: ps命令
-psmisc: pstree命令
+procps-ng: ps命令（docker）
+psmisc: pstree命令（docker）
