@@ -2,10 +2,9 @@
 
 timedatectl set-timezone Asia/Shanghai
 
-#service iptables stop   #centos6
-#chkconfig iptables off   #centos6
 systemctl stop firewalld   #centos7
 systemctl disable firewalld #centos7
+
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 sed -i 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 setenforce 0
