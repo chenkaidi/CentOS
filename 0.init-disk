@@ -1,23 +1,15 @@
-fdisk /dev/vdb
+#!/bin/bash
 
-先输入n表示设定新的硬盘分割区
+fdisk /dev/vdb << EOF
+n
+p
 
-再输入p表示设置的是主要分割区
 
-输入回车表示选择默认,所以
 
-分区号默认选择1
-
-起始扇区选择默认2048
-
-最后的扇区选择默认1048575999
-
-输入w保存
-
------
-
-mkfs -t ext4 /dev/vdb1
-
-mkdir /data
-mount /dev/vdb1 /data
-echo "/dev/vdb1                                 /data ext4    defaults        0 0" >> /etc/fstab
+w
+EOF
+mkfs.xfs /dev/vdb1
+echo "/dev/vdb1    /data    xfs    defaults 0 0">>/etc/fstab
+mkdir -p /data
+mount -a
+df -h
