@@ -9,7 +9,7 @@ p
 w
 EOF
 mkfs.xfs /dev/vdb1
-echo "/dev/vdb1    /data    xfs    defaults 0 0">>/etc/fstab
+echo "/dev/vdb1        /data        xfs    defaults 0 0">>/etc/fstab
 mkdir -p /data
 mount -a
 df -h
