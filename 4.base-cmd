@@ -1,4 +1,4 @@
-yum -y install vim wget git zip unzip lrzsz net-tools telnet tree nmap dos2unix nc lsof tcpdump htop iftop iotop iostat sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch bash-completion  procps-ng psmisc 
+yum -y install vim wget git zip unzip lrzsz net-tools telnet tree nmap dos2unix nc lsof tcpdump htop iftop iotop sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch bash-completion  procps-ng psmisc 
 ---
 解释
 vim:
@@ -16,8 +16,7 @@ wget: 下载软件包工具
 tcpdump: 抓包,监听等重要排错工具
 htop: 系统进程相关信息查看工具
 iftop: 查看主机网卡带宽工具
-iotop:
-sysstat: 含有sar,iostat等重要系统性能查看工具
+sysstat: 含有sar,iostat,vmstat等重要系统性能查看工具
 nethogs: 显示进程的网络流量
 procps-ng: ps命令（docker）
 psmisc: pstree命令（docker）
