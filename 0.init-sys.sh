@@ -10,14 +10,14 @@ sed -i 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 setenforce 0
 
 echo "
-* soft nofile 655350
-* hard nofile 655350
-* soft nproc 655350
-* soft nproc 655350
+* soft nofile 65535
+* hard nofile 65535
+* soft nproc 65535
+* soft nproc 65535
 " >> /etc/security/limits.conf
-echo "*          soft    nproc     655350" >> /etc/security/limits.d/20-nproc.conf
-ulimit -n 655350
-ulimit -u 655350
+echo "*          soft    nproc     65535" >> /etc/security/limits.d/20-nproc.conf
+ulimit -n 65535
+ulimit -u 65535
 
 echo "
 net.ipv4.tcp_syncookies = 1
@@ -62,7 +62,7 @@ EOF
 
 sed -i 's/#UsePAM no/UsePAM yes/g' /etc/ssh/sshd_config
 
-echo "DefaultLimitNOFILE=655360" >>/etc/systemd/system.conf
+echo "DefaultLimitNOFILE=65535" >>/etc/systemd/system.conf
 systemctl daemon-reexec
 
 systemctl restart sshd
