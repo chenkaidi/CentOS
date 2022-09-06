@@ -61,4 +61,8 @@ session    include      postlogin
 EOF
 
 sed -i 's/#UsePAM no/UsePAM yes/g' /etc/ssh/sshd_config
+
+echo "DefaultLimitNOFILE=655360" >>/etc/systemd/system.conf
+systemctl daemon-reexec
+
 systemctl restart sshd
