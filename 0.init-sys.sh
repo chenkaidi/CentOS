@@ -15,7 +15,9 @@ echo "
 * soft nproc 65535
 * soft nproc 65535
 " >> /etc/security/limits.conf
+
 echo "*          soft    nproc     65535" >> /etc/security/limits.d/20-nproc.conf
+
 ulimit -n 65535
 ulimit -u 65535
 
@@ -29,6 +31,7 @@ net.core.somaxconn = 1024
 vm.overcommit_memory = 1
 vm.max_map_count = 262144
 " >> /etc/sysctl.conf
+
 sysctl -p
 
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
@@ -62,7 +65,11 @@ EOF
 
 sed -i 's/#UsePAM no/UsePAM yes/g' /etc/ssh/sshd_config
 
-echo "DefaultLimitNOFILE=65535" >>/etc/systemd/system.conf
+echo "
+DefaultLimitNOFILE=65535
+DefaultLimitNPROC=65535
+" >>/etc/systemd/system.conf
+
 systemctl daemon-reexec
 
 systemctl restart sshd
