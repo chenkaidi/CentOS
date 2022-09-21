@@ -1,4 +1,4 @@
-yum -y install vim wget git zip unzip lrzsz net-tools telnet tree nmap dos2unix nc lsof tcpdump htop iftop iotop sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch bash-completion  procps-ng psmisc 
+yum -y install vim wget git zip unzip lrzsz net-tools telnet tree nmap dos2unix jq nc lsof tcpdump htop ipset ipvsadm iftop iotop sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch bash-completion  procps-ng psmisc 
 ---
 解释
 vim:
@@ -7,6 +7,7 @@ net-tools: netstat
 tree: tree以树形结构显示文件和目录
 nmap: nmap扫描端口的工具
 dos2unix: 转换脚本格式的工具
+jq: 计算器
 lrzsz:
 rz+文件名(上传)
 sz+文件名(下载)
