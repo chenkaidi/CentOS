@@ -1,4 +1,30 @@
-yum -y install vim wget git zip unzip lrzsz net-tools telnet tree nmap dos2unix jq nc lsof tcpdump htop ipset ipvsadm iftop iotop sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel openssl openssl-devel patch bash-completion  procps-ng psmisc 
+yum -y install vim
+yum -y install wget
+yum -y install git
+yum -y install zip
+yum -y install unzip
+yum -y install lrzsz
+yum -y install net-tools
+yum -y install telnet
+yum -y install tree
+yum -y install nmap
+yum -y install dos2unix
+yum -y install jq
+yum -y install nc
+yum -y install lsof
+yum -y install tcpdump
+yum -y install htop
+yum -y install ipset
+yum -y install ipvsadm
+yum -y install iftop
+yum -y install iotop
+yum -y install sysstat
+yum -y install gcc
+yum -y install gcc-c++
+yum -y install zlib
+yum -y install zlib-devel
+yum -y install openssl
+yum -y install openssl-devel
 ---
 解释
 vim:
